@@ -1,0 +1,40 @@
+.customHeight {
+  height: 100vh;
+}
+.customHeight2 {
+  height: calc(100% - 34px);
+  overflow-y: auto;
+}
+.customHeight2::-webkit-scrollbar {
+  width: 2px;
+}
+.profileImgContainer,
+.profileName {
+  z-index: 10;
+}
+
+.profileImage {
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.layer {
+  left: -100%;
+  background-color: rgba(0, 0, 0, 0.034);
+  transition: left 0.4s;
+}
+
+.userInfoContainer:hover .layer {
+  left: 0;
+}
+.userInfoContainer{
+  transition: transform 0.4s ;
+}
+
+.userInfoContainer:active{
+  transform: scale(0.9);
+}
+.title1{
+  background-color: rgba(0, 0, 0, 0.034);
+}
