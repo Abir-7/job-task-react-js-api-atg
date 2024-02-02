@@ -25,7 +25,7 @@
   background-color: rgba(234, 100, 22, 0.765);
   transition: left 0.4s;
   box-sizing: border-box;
-  box-shadow: 0 0 50px rgba(234, 100, 22, 0.765) inset ;
+  box-shadow: 0 0 50px rgba(234, 100, 22, 0.765) inset;
 }
 
 .userInfoContainer:hover .layer {
@@ -35,27 +35,131 @@
   color: white;
 }
 
-.userInfoContainer{
-  transition: transform 0.4s ;
+.userInfoContainer {
+  transition: transform 0.4s;
   box-sizing: border-box;
   overflow: hidden;
-  border: 2px solid rgba(234, 100, 22, 0.567) ;
+  border: 2px solid rgba(234, 100, 22, 0.567);
   transition: color 0.4s;
 }
 
-.userInfoContainer:active{
+.userInfoContainer:active {
   transform: scale(0.9);
 }
-.title1{
+.title1 {
   background-color: rgba(234, 100, 22, 0.765);
   color: white;
 }
-.custom-user-details-height{
+.custom-user-details-height {
   height: calc(100% - 50px);
+
+  overflow-x: hidden;
 }
 
-.userProfilePic{
-  box-shadow: 0 0 15px rgba(255, 68, 0, 0.601)  ;
+.userProfilePic {
+  box-shadow: 0 0 15px rgba(255, 68, 0, 0.601);
   padding: 5px;
-  border:2px solid rgba(255, 68, 0, 0.601);
+  border: 2px solid rgba(255, 68, 0, 0.601);
+}
+
+.userInfoTitle {
+  background-color: rgba(255, 68, 0, 0.601);
+  width: 84px;
+  color: white;
+}
+.userInfoData {
+  border: 1px solid rgba(255, 68, 0, 0.601);
+  border-left: 0;
+}
+.buttonUser{
+  display: none;
+}
+
+.alluserBox {
+
+  height: calc(100% - 0px);
+}
+#allUser{
+  width: 365px;
+}
+.custom-shadow{
+transition: box-shadow 0.5s ;
+}
+.custom-shadow:hover{
+  box-shadow: 0 0 10px  rgba(234, 100, 22, 0.665);
+  border-radius: 5px;
+}
+
+
+/* loader css */
+
+
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  animation: spin 1s linear infinite;
+  stroke: rgba(234, 100, 22, 0.665);
+}
+
+.loading-text {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: rgba(234, 100, 22, 0.665);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+@media only screen and (min-width: 250px) and (max-width: 700px) {
+
+  .alluserBox {
+    position: absolute;
+    top:43px;
+   left: -100%;
+    z-index: 1;
+    background-color: white;
+    transition:left 0.5s ;
+    height: calc(100% - 48px);
+  }
+  .alluserBox.active {
+   left: 0;
+  }
+
+.date_time{
+  display: none;
+}
+  .buttonUser{
+    top:5px;
+    left:10px;
+    color:white;
+    display: block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.425);
+    transition:transform 0.5s ;
+  }
+
+  .buttonUser:active{transform: scale(0.9);}
+
+  #allUser{
+    width: 265px;
+  }
 }
