@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import { Link, NavLink, Outlet } from "react-router-dom";
 
 import axios from "axios";
 
@@ -32,7 +31,11 @@ export default function UsersPage() {
     setAllUserData(updatedImage);
   };
 
-  const [id, setId] = useState(null);
+  const [singleUser, setSingleUser] = useState(null);
+
+  const setUserID=(user)=>{
+    setSingleUser(user)
+  }
 
   return (
     <div className="customHeight">
@@ -44,8 +47,8 @@ export default function UsersPage() {
           <div className=" customHeight2 ">
           {allUserData.map((user, index) => (<div
               key={index}
-              onClick={() => setId(user.id)}
-              className=" userInfoContainer d-flex position-relative align-items-center border my-2 p-2"
+              onClick={() => setUserID(user)}
+              className=" userInfoContainer rounded-2 shadow-sm d-flex position-relative align-items-center  my-2 p-2"
             >
               <div className="profileImgContainer z-5">
                 <img
@@ -56,7 +59,7 @@ export default function UsersPage() {
                 />
               </div>
               <div className="profileName">{user.profile.username}</div>
-              <div className="position-absolute  w-100 h-100 layer"></div>
+              <div className="position-absolute h-100 layer "></div>
             </div>
           ))}
         </div>
@@ -65,7 +68,7 @@ export default function UsersPage() {
 
         <div className="col-9">
           {/* <Outlet></Outlet> */}
-          <SingleUsers id={id}></SingleUsers>
+          <SingleUsers userData={singleUser}></SingleUsers>
         </div>
       </div>
     </div>

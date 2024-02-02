@@ -2,7 +2,7 @@
   height: 100vh;
 }
 .customHeight2 {
-  height: calc(100% - 34px);
+  height: calc(100% - 46px);
   overflow-y: auto;
 }
 .customHeight2::-webkit-scrollbar {
@@ -20,21 +20,42 @@
   height: 40px;
 }
 .layer {
+  width: 100%;
   left: -100%;
-  background-color: rgba(0, 0, 0, 0.034);
+  background-color: rgba(234, 100, 22, 0.765);
   transition: left 0.4s;
+  box-sizing: border-box;
+  box-shadow: 0 0 50px rgba(234, 100, 22, 0.765) inset ;
 }
 
 .userInfoContainer:hover .layer {
-  left: 0;
+  left: 0%;
 }
+.userInfoContainer:hover {
+  color: white;
+}
+
 .userInfoContainer{
   transition: transform 0.4s ;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 2px solid rgba(234, 100, 22, 0.567) ;
+  transition: color 0.4s;
 }
 
 .userInfoContainer:active{
   transform: scale(0.9);
 }
 .title1{
-  background-color: rgba(0, 0, 0, 0.034);
+  background-color: rgba(234, 100, 22, 0.765);
+  color: white;
+}
+.custom-user-details-height{
+  height: calc(100% - 50px);
+}
+
+.userProfilePic{
+  box-shadow: 0 0 15px rgba(255, 68, 0, 0.601)  ;
+  padding: 5px;
+  border:2px solid rgba(255, 68, 0, 0.601);
 }
